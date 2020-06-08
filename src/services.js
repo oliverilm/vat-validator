@@ -2,7 +2,7 @@ import axios from "axios"
 
 
 /**
- *
+ * Perform actions with VAT code or data.
  */
 class VatCheckService {
   BaseURL = "https://vat.erply.com/numbers?vatNumber="
@@ -13,7 +13,7 @@ class VatCheckService {
    * @param {function({})} callback - A callback function to pass data to the requester.
    */
   getVatData(vat, callback) {
-    axios.get(`${this.BaseURL}${vat}`).then(r => {
+    axios.get(`${this.BaseURL}${vat.trim()}`).then(r => {
       callback(r.data)
     }).catch(error => {
       callback(error)
@@ -32,7 +32,7 @@ class VatCheckService {
    * @returns boolean - True if VAT number is valid and if corresponds to a organisation.
    */
   vatIsValid(vat) {
-    return vat.Name !== "---" && vat.name !== "Error";
+    return vat.Name !== "---" && vat.name !== "Error" && vat.Name !== "";
   }
 
 }
