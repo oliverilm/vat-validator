@@ -1,5 +1,9 @@
 import axios from "axios"
 
+
+/**
+ *
+ */
 class VatCheckService {
   BaseURL = "https://vat.erply.com/numbers?vatNumber="
   /**
@@ -14,6 +18,21 @@ class VatCheckService {
     }).catch(error => {
       callback(error)
     })
+  }
+
+  /**
+   * Check if provided VAT number is valid.
+   *
+   * @param {{ CountryCode:string,
+   *   VATNumber:string,
+   *   RequestDate:string,
+   *   Valid:boolean,
+   *   Name:string,"Address":string,
+   *   name:string, }} vat - Response object from VAT query.
+   * @returns boolean - True if VAT number is valid and if corresponds to a organisation.
+   */
+  vatIsValid(vat) {
+    return vat.Name !== "---" && vat.name !== "Error";
   }
 
 }

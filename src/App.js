@@ -41,12 +41,12 @@ const RequestForm = (props) => {
     e.preventDefault()
 
     VatCheckService.getVatData(vat, (vatData) => {
-      if (vatData.name === "Error") {
-        recievedData(null)
-        setError(vatData)
-      } else {
+      if (VatCheckService.vatIsValid(vatData)) {
         setError(null)
         recievedData(vatData)
+      } else {
+        recievedData(null)
+        setError("Invalid VAT Number")
       }
     })
   }
@@ -67,7 +67,7 @@ const RequestError = (props) => {
 
   return (
     <div className={"error"}>
-      {error.message}
+      {error}
     </div>
   )
 }
