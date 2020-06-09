@@ -1,5 +1,20 @@
+body, html {
+  background-image: url("assets/background_2.png");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .page-content {
-  margin-top: 10%;
+  margin-top: 7vh;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  background-color: rgba(0, 0,0, .5);
+  border-radius: 5px;
 }
 
 .show-alert {
@@ -7,6 +22,7 @@
 }
 
 .error {
+  opacity: 1;
   display: flex;
   justify-content: space-evenly;
   border-radius: 10px;
@@ -69,8 +85,14 @@
   width: 80%;
   height: inherit;
   padding-left: 1em;
-
+  background-color: #ecf0f1;
+  border: none;
 }
+
+.request-form:focus input:focus {
+  border:none;
+}
+
 .request-form button {
   flex: 0.2;
   width: 20%;
@@ -85,6 +107,14 @@
 .data-table {
   margin-top: 1em;
   animation: SlideIn .5s forwards;
+  background-color: rgba(255, 255,255,1);
+  padding: 1em;
+}
+
+.table-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 @keyframes SlideIn {
@@ -94,4 +124,12 @@
   to {
     opacity: 1;
   }
+}
+
+@keyframes ChangeColor {
+  0% {background: linear-gradient(45deg, #3498db, #2ecc71);}
+  25% {background: linear-gradient(45deg, #2ecc71, #f39c12);}
+  50% {background-color: #f39c12;}
+  75% {background-color: #9b59b6;}
+  100% {background-color: #3498db;}
 }
