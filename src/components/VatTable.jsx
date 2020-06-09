@@ -23,7 +23,7 @@ const VatTable = (props) => {
     <div className={"data-table"}>
       <div className={"table-header"}>
         <div>
-          <h2 style={{color: "#34495e"}}>{`Result for "${data.CountryCode}${data.VATNumber}"`}</h2>
+          <h2>{`Result for "${data.CountryCode}${data.VATNumber}"`}</h2>
         </div>
         <div onClick={removeTable}>
           <i className="far fa-times-circle"/>

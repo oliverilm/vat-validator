@@ -4,6 +4,8 @@ import PropTypes from "prop-types"
 import RequestError from "./RequestError";
 
 /**
+ * Form for requesting VAT data from the API.
+ *
  * @param {{receivedData: function({})}} props - Passed properties to the component.
  * @constructor
  */
@@ -15,7 +17,7 @@ const RequestForm = (props) => {
   /**
    * Validate VAT data and pass it to parent, using callback.
    *
-   * @param {any} e - event from form submission.
+   * @param {{}} e - event from form submission.
    */
   const passData = (e) => {
     e.preventDefault()
@@ -36,7 +38,7 @@ const RequestForm = (props) => {
       <form onSubmit={event => {
         passData(event)
       }}>
-        <input onChange={event => setVat(event.target.value)} placeholder={"VAT number"}/>
+        <input onChange={event => setVat(event.target.value)} placeholder={"VAT number lookup"}/>
         <button type={"submit"}>Search</button>
       </form>
       {error != null ? <RequestError removeError={() => setError(null)} error={error}/> : null}
