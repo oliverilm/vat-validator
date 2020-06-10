@@ -29,6 +29,7 @@ Otherwise the resulting data for provided VAT number will be presented below the
 
 #### Used technologies
 
+* Axios - performing async http requests.
 * Bootstrap - styling
 * PropTypes - Runtime prop validation
 * jsDoc - Code documentation
