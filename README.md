@@ -2,7 +2,7 @@
 
 The following solution was constructed in React JS, making use of some Bootstrap functionality.
 
-Starting the project
+#### Starting the project
 ```shell script
 git clone https://github.com/oliverilm/vat-validator.git
 
