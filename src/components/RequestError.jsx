@@ -21,8 +21,8 @@ const RequestError = (props) => {
 }
 
 RequestError.propTypes = {
-  error: PropTypes.string,
-  removeError: PropTypes.func,
+  error: PropTypes.string.isRequired,
+  removeError: PropTypes.func.isRequired,
 }
 
 export default RequestError

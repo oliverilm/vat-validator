@@ -47,7 +47,7 @@ const RequestForm = (props) => {
 }
 
 RequestForm.propTypes = {
-  receivedData: PropTypes.object
+  receivedData: PropTypes.object.isRequired
 }
 
 export default RequestForm

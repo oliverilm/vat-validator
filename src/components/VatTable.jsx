@@ -68,8 +68,8 @@ const VatTable = (props) => {
 }
 
 VatTable.propTypes = {
-  data: PropTypes.object,
-  removeTable: PropTypes.func
+  data: PropTypes.object.isRequired,
+  removeTable: PropTypes.func.isRequired
 }
 
 export default VatTable
