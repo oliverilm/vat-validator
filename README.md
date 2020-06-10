@@ -7,7 +7,9 @@ Starting the project
 git clone https://github.com/oliverilm/vat-validator.git
 
 cd vat-validator
-
+```
+Create a ```.env``` file to the root directory of the project and insert the proper information in it. (specified in the ```.env-sample```  file)
+```shell script
 yarn install
 yarn start
 ```
